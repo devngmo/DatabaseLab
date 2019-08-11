@@ -9,6 +9,8 @@
             android:roundIcon="@mipmap/ic_launcher_round"
             android:supportsRtl="true"
             android:theme="@style/AppTheme">
+        <activity android:name=".TodoTaskEditorActivity">
+        </activity>
         <activity
                 android:name=".TodolistWithRoomActivity"
                 android:label="@string/title_activity_todolist_with_room"

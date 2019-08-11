@@ -1,6 +1,7 @@
 package tml.lab.databaselab
 
 import android.content.Context
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -24,12 +25,18 @@ class TodolistWithRoomActivity : AppCompatActivity() {
         setSupportActionBar(toolbar)
 
         fab.setOnClickListener { view ->
-            Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                .setAction("Action", null).show()
+            //Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+             //   .setAction("Action", null).show()
+            openTaskEditor_addNew()
         }
 
         lvTasks.layoutManager = LinearLayoutManager(this)
         lvTasks.adapter = TaskAdapter(application)
+    }
+
+    private fun openTaskEditor_addNew() {
+        val i = Intent(this, TodoTaskEditorActivity::class.java)
+        startActivity(i)
     }
 
     class TaskAdapter internal constructor(context:Context)
