@@ -1,5 +1,6 @@
 package tml.lab.databaselab
 
+import android.util.Log
 import androidx.annotation.WorkerThread
 import androidx.lifecycle.LiveData
 import tml.lab.databaselab.models.ITodoTaskDao
@@ -11,6 +12,7 @@ class TodoTaskRepository(private val todoTaskDao: ITodoTaskDao)  {
 
     @WorkerThread
     suspend fun insert(task:TodoTask) {
+        Log.d("DBGLOG", "TodoTaskRepository:insert new task '${task.text}'")
         todoTaskDao.insert(task)
     }
 }
