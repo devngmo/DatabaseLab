@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".MainActivity">
+
+
+    <TextView
+            android:textSize="20pt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Database Lab"
+            android:textAlignment="center"
+            android:padding="20dp"
+    />
+    <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                      android:orientation="vertical">
+            <Button android:text="SQLDelight: Book Library"
+                    android:onClick="openSQLDelightBookManager" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+
+            <Button android:text="Room: Todolist"
+                    android:onClick="open_Room_TodoList" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.appcompat.widget.LinearLayoutCompat>

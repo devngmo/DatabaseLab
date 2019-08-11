@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">DatabaseLab</string>
+    <string name="title_activity_book_manager">BookManagerActivity</string>
+    <string name="title_activity_todolist_with_room">TodolistWithRoomActivity</string>
+</resources>

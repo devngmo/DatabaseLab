@@ -1,0 +1,29 @@
+CREATE TABLE Book (
+  book_id INTEGER NOT NULL,
+  book_name TEXT NOT NULL
+);
+
+CREATE INDEX Book_name ON Book(book_name);
+
+INSERT INTO Book (book_id, book_name)
+VALUES (1, 'Book 1');
+
+INSERT INTO Book (book_id, book_name)
+VALUES (2, 'Book 2');
+
+INSERT INTO Book (book_id, book_name)
+VALUES (3, 'Book 3');
+
+
+selectAll:
+SELECT * FROM Book;
+
+insertBook:
+INSERT INTO Book(book_id, book_name)
+VALUES (?, ?);
+
+getBookByID:
+SELECT * FROM Book WHERE book_id = ?;
+
+renameBook:
+UPDATE Book SET book_name = ? WHERE book_id = ?;
